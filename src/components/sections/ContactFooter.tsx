@@ -2,7 +2,8 @@
 
 import { portfolioData } from "@/data/portfolio";
 import { motion } from "framer-motion";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { Github, Linkedin } from "@/components/ui/Icons";
 
 export function ContactFooter() {
   const { email, github, linkedin, name } = portfolioData.personalInfo;
