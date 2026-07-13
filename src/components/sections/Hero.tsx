@@ -100,7 +100,7 @@ export function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1, duration: 1 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/50"
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce text-white/50 hidden sm:block"
       >
         <ArrowDown size={24} />
       </motion.div>

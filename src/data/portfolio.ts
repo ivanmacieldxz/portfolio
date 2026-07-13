@@ -88,7 +88,7 @@ export const portfolioData: PortfolioData = {
         "/projects/my-news-feed/6.png",
       ],
       repoLink: "https://github.com/ivanmacieldxz/my-news-feed",
-      demoLink: "https://my-news-feed-ivanmacieldxzs-projects.vercel.app/",
+      demoLink: "https://my-news-feed-tau.vercel.app/",
       aiDriven: true,
     },
     {
