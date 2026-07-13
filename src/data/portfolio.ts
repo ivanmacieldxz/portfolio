@@ -110,7 +110,7 @@ export const portfolioData: PortfolioData = {
         "/projects/portfolio/screen1.png"
       ],
       repoLink: "https://github.com/ivanmacieldxz/portfolio",
-      demoLink: "https://portfolio.vercel.app/",
+      demoLink: "https://ivanmacieldxz-portfolio.vercel.app/",
       aiDriven: true,
     },
   ],
