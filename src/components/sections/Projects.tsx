@@ -102,7 +102,8 @@ export function Projects() {
           {carouselProjects.map((project, index) => (
             <div 
               key={`${project.id}-${index}`} 
-              className="flex-[0_0_85%] min-w-0 md:flex-[0_0_60%] lg:flex-[0_0_50%] xl:flex-[0_0_40%] h-auto"
+              className="flex-[0_0_85%] min-w-0 md:flex-[0_0_60%] lg:flex-[0_0_50%] xl:flex-[0_0_40%] h-auto cursor-pointer"
+              onClick={() => emblaApi?.scrollTo(index)}
             >
               <div className={`h-full transition-all duration-500 ease-out ${
                 index === selectedIndex ? "opacity-100 scale-100" : "opacity-40 scale-95"

@@ -9,7 +9,7 @@ export function Hero() {
   const { name, title, bio, github, linkedin, email } = portfolioData.personalInfo;
 
   return (
-    <section className="min-h-screen flex flex-col justify-center relative px-6 md:px-12 lg:px-24">
+    <section className="min-h-screen flex flex-col justify-center relative p-6 md:p-0 md:px-6 md:px-12 lg:px-24">
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute -top-[20%] -left-[10%] w-[50%] h-[50%] rounded-full bg-primary/20 blur-[120px]" />
         <div className="absolute top-[20%] -right-[10%] w-[40%] h-[40%] rounded-full bg-secondary/10 blur-[100px]" />
@@ -25,14 +25,14 @@ export function Hero() {
             Hola, mi nombre es
           </h2>
         </motion.div>
-        
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
           <h1 className="text-5xl md:text-7xl font-bold font-sans tracking-tight mb-4">
-            {name}.
+            {name}
           </h1>
         </motion.div>
 
@@ -46,14 +46,16 @@ export function Hero() {
           </h2>
         </motion.div>
 
-        <motion.p
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
-          className="text-lg md:text-xl text-white/70 max-w-2xl mb-10 leading-relaxed"
+          className="text-lg md:text-xl text-white/70 max-w-2xl mb-10 leading-relaxed flex flex-col gap-4"
         >
-          {bio}
-        </motion.p>
+          {bio.map((paragraph, index) => (
+            <p key={index}>{paragraph}</p>
+          ))}
+        </motion.div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
