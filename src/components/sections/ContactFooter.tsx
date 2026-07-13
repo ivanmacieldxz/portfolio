@@ -6,7 +6,8 @@ import { Mail } from "lucide-react";
 import { Github, Linkedin } from "@/components/ui/Icons";
 
 export function ContactFooter() {
-  const { email, github, linkedin, name } = portfolioData.personalInfo;
+  const { personalInfo, sections } = portfolioData;
+  const { email, github, linkedin, name } = personalInfo;
   const currentYear = new Date().getFullYear();
 
   return (
@@ -19,19 +20,17 @@ export function ContactFooter() {
         className="max-w-2xl text-center mb-24"
       >
         <h2 className="text-sm font-mono text-primary mb-4 tracking-wider">
-          04. ¿Qué sigue?
+          04. {sections.contact.subtitle}
         </h2>
-        <h3 className="text-4xl md:text-6xl font-bold mb-6">Ponte en contacto</h3>
+        <h3 className="text-4xl md:text-6xl font-bold mb-6">{sections.contact.title}</h3>
         <p className="text-white/70 text-lg mb-10 leading-relaxed">
-          Actualmente estoy abierto a nuevas oportunidades. Si tienes una pregunta, 
-          una propuesta interesante o simplemente quieres saludar, mi bandeja de entrada 
-          está siempre abierta. ¡Haré lo posible por responderte pronto!
+          {sections.contact.description}
         </p>
         <a
           href={`mailto:${email}`}
           className="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-primary text-primary font-bold rounded-full hover:bg-primary/10 transition-colors"
         >
-          Saludar
+          {sections.contact.ctaText}
         </a>
       </motion.div>
 

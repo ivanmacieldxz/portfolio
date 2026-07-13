@@ -24,8 +24,22 @@ export interface PersonalInfo {
   email: string;
 }
 
+export interface SectionTexts {
+  about: {
+    title: string;
+    paragraphs: string[];
+  };
+  contact: {
+    subtitle: string;
+    title: string;
+    description: string;
+    ctaText: string;
+  };
+}
+
 export interface PortfolioData {
   personalInfo: PersonalInfo;
+  sections: SectionTexts;
   projects: Project[];
   skills: SkillCategory[];
 }
@@ -38,6 +52,22 @@ export const portfolioData: PortfolioData = {
     github: "https://github.com/ivanmacieldxz",
     linkedin: "https://www.linkedin.com/in/iv%C3%A1n-maciel-344a543b2/",
     email: "ivanemanuelmaciel@gmail.com",
+  },
+  sections: {
+    about: {
+      title: "Sobre Mí",
+      paragraphs: [
+        "Soy un desarrollador apasionado por el diseño y la interacción. Mi objetivo principal es construir interfaces que no solo funcionen perfectamente, sino que también dejen una impresión duradera en los usuarios.",
+        "A lo largo de mi carrera, he trabajado en diversos proyectos, desde aplicaciones internas hasta productos SaaS de alto tráfico. Me encanta explorar nuevas tecnologías, optimizar el rendimiento (Core Web Vitals) y crear sistemas de diseño escalables.",
+        "Cuando no estoy programando, probablemente me encuentres leyendo sobre UX, experimentando con animaciones CSS/Framer Motion, o simplemente tomando un buen café."
+      ]
+    },
+    contact: {
+      subtitle: "¿Qué sigue?",
+      title: "Ponte en contacto",
+      description: "Actualmente estoy abierto a nuevas oportunidades. Si tienes una pregunta, una propuesta interesante o simplemente quieres saludar, mi bandeja de entrada está siempre abierta. ¡Haré lo posible por responderte pronto!",
+      ctaText: "Saludar"
+    }
   },
   projects: [
     {
@@ -105,7 +135,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       category: "Tools & Others",
-      skills: ["Git", "Responsive Design", "API design and integration", "AI driven development"]
+      skills: ["Git", "GitFlow", "Responsive Design", "API design and integration", "AI driven development"]
     }
   ]
 };
