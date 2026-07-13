@@ -2,7 +2,8 @@
 
 import { motion } from "framer-motion";
 import { portfolioData } from "@/data/portfolio";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { ArrowDown, Mail } from "lucide-react";
+import { Github, Linkedin } from "@/components/ui/Icons";
 
 export function Hero() {
   const { name, title, bio, github, linkedin, email } = portfolioData.personalInfo;
