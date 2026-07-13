@@ -41,10 +41,13 @@ export function Carousel({ images }: CarouselProps) {
         <div className="flex">
           {images.map((img, index) => (
             <div className="flex-[0_0_100%] min-w-0 relative aspect-video bg-black/20" key={index}>
-              {/* Dummy images logic: We'll use a placeholder if the path is dummy */}
-              <div className="absolute inset-0 flex items-center justify-center text-white/20 text-sm">
-                Placeholder {img}
-              </div>
+              <Image 
+                src={img} 
+                alt={`Screenshot ${index + 1}`}
+                fill
+                className="object-cover rounded-t-xl"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
           ))}
         </div>

@@ -77,9 +77,12 @@ export const portfolioData: PortfolioData = {
       detailedDescription: "Explora noticias por categorías generales o recibe un feed 'Para Ti' basado en tus tópicos de interés. Cuenta con búsqueda, traducción de titulares en tiempo real, estimación de tiempo de lectura, sistema de favoritos e historial, y autenticación segura con Clerk.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Prisma", "Neon DB", "Clerk", "API integration"],
       images: [
-        "/projects/app1/screen1.png",
-        "/projects/app1/screen2.png",
-        "/projects/app1/screen3.png",
+        "/projects/my-news-feed/1.png",
+        "/projects/my-news-feed/2.png",
+        "/projects/my-news-feed/3.png",
+        "/projects/my-news-feed/4.png",
+        "/projects/my-news-feed/5.png",
+        "/projects/my-news-feed/6.png",
       ],
       repoLink: "https://github.com/ivanmacieldxz/my-news-feed",
       demoLink: "https://my-news-feed-ivanmacieldxzs-projects.vercel.app/",
@@ -92,9 +95,18 @@ export const portfolioData: PortfolioData = {
       detailedDescription: "Permite filtrar recetas basadas en los ingredientes que posees, organizar un planificador semanal con lista de compras automática y hacer seguimiento de tu perfil nutricional (calorías y macronutrientes). Instalable en dispositivos móviles como PWA.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "Recharts", "Prisma", "Neon DB", "Clerk", "PWA", "API integration"],
       images: [
-        "/projects/app2/screen1.png",
-        "/projects/app2/screen2.png",
-        "/projects/app2/screen3.png",
+        "/projects/nutricraft/1.png",
+        "/projects/nutricraft/2.png",
+        "/projects/nutricraft/3.png",
+        "/projects/nutricraft/4.png",
+        "/projects/nutricraft/5.png",
+        "/projects/nutricraft/6.png",
+        "/projects/nutricraft/7.png",
+        "/projects/nutricraft/8.png",
+        "/projects/nutricraft/9.png",
+        "/projects/nutricraft/10.png",
+        "/projects/nutricraft/11.png",
+        "/projects/nutricraft/12.png"
       ],
       repoLink: "https://github.com/ivanmacieldxz/nutricraft",
       demoLink: "https://nutricraft-gilt.vercel.app/",
@@ -107,7 +119,10 @@ export const portfolioData: PortfolioData = {
       detailedDescription: "Un portfolio web moderno y completamente responsivo diseñado para mostrar mis proyectos y habilidades. Utiliza una estética oscura y pulida, con componentes interactivos y animaciones fluidas.",
       technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Embla Carousel"],
       images: [
-        "/projects/portfolio/screen1.png"
+        "/projects/portfolio/1.png",
+        "/projects/portfolio/2.png",
+        "/projects/portfolio/3.png",
+        "/projects/portfolio/4.png",
       ],
       repoLink: "https://github.com/ivanmacieldxz/portfolio",
       demoLink: "https://ivanmacieldxz-portfolio.vercel.app/",
@@ -134,6 +149,29 @@ export const portfolioData: PortfolioData = {
       demoLink: "",
     },
     {
+      id: "towit-tower-app",
+      title: "TowIt - Tower App",
+      shortDescription: "Aplicación web para conductores de grúas de la plataforma TowIt.",
+      detailedDescription: "Aplicación (rol conductor) para una plataforma de servicios de remolque. Permite a los conductores de grúa (Towers) gestionar su disponibilidad, registrar vehículos y procesar solicitudes de remolque. El sistema forma parte de una arquitectura de 4 aplicaciones autónomas que se comunican mediante APIs REST.",
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Neon DB", "Prisma", "Upstash Redis", "Clerk"],
+      images: [
+        "/projects/towit/1.png",
+        "/projects/towit/2.png",
+        "/projects/towit/3.png",
+        "/projects/towit/4.png",
+        "/projects/towit/5.png",
+        "/projects/towit/6.png",
+        "/projects/towit/7.png",
+        "/projects/towit/8.png",
+        "/projects/towit/9.png",
+        "/projects/towit/10.png",
+        "/projects/towit/11.png",
+      ],
+      repoLink: "https://github.com/IAW-2026/proyecto-a-driver2-towit",
+      demoLink: "https://proyecto-a-driver2-towit.vercel.app/",
+      aiDriven: true,
+    },
+    {
       id: "task-management-api",
       title: "Task Management API",
       shortDescription: "API REST tipo Trello para gestión de proyectos y tareas.",
@@ -155,19 +193,19 @@ export const portfolioData: PortfolioData = {
     },
     {
       category: "Backend",
-      skills: ["Node.js", "Next.js", "Java", "Spring", "Kotlin"]
+      skills: ["Node.js", "Java", "Spring Boot", "Spring Security", "Kotlin", "REST APIs", "JWT"]
     },
     {
       category: "DataBases",
-      skills: ["PostgreSQL", "Neon DB", "Supabase", "Prisma"]
+      skills: ["PostgreSQL", "Neon DB", "Supabase", "Prisma", "Hibernate"]
     },
     {
       category: "Mobile",
-      skills: ["Android", "Kotlin", "Jetpack Compose", "XML", "Gradle"]
+      skills: ["Android", "Kotlin", "Jetpack Compose", "MVVM", "XML", "Gradle"]
     },
     {
       category: "Tools & Others",
-      skills: ["Git", "GitFlow", "Responsive Design", "API design and integration", "AI driven development"]
+      skills: ["Git", "GitFlow", "Docker", "Compiler Design", "AI driven development"]
     }
   ]
 };
