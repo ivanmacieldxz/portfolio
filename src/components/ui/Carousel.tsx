@@ -11,7 +11,12 @@ interface CarouselProps {
 }
 
 const FullscreenLightbox = ({ images, initialIndex, onClose }: { images: string[], initialIndex: number, onClose: () => void }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, startIndex: initialIndex });
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: true,
+    startIndex: initialIndex,
+    align: "center",
+    skipSnaps: false
+  });
   const [selectedIndex, setSelectedIndex] = useState(initialIndex);
 
   const scrollPrev = useCallback(() => {
@@ -52,7 +57,7 @@ const FullscreenLightbox = ({ images, initialIndex, onClose }: { images: string[
 
   return (
     <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 backdrop-blur-md">
-      <button 
+      <button
         onClick={onClose}
         className="absolute top-4 right-4 md:top-6 md:right-6 p-2 text-white/70 hover:text-white transition-colors z-[110]"
         aria-label="Close fullscreen"
@@ -61,12 +66,21 @@ const FullscreenLightbox = ({ images, initialIndex, onClose }: { images: string[
       </button>
 
       <div className="w-full h-full flex items-center justify-center p-4 md:p-12 overflow-hidden" ref={emblaRef}>
-        <div className="flex w-full h-full items-center">
+        <div className="flex w-full h-full items-center gap-4 md:gap-8 cursor-grab active:cursor-grabbing">
           {images.map((img, index) => (
-            <div className="flex-[0_0_100%] min-w-0 relative w-full h-full flex items-center justify-center" key={index}>
-              <div className="relative w-full h-full max-h-[85vh] max-w-6xl mx-auto">
-                <Image 
-                  src={img} 
+            <div
+              className="flex-[0_0_85%] min-w-0 md:flex-[0_0_75%] lg:flex-[0_0_65%] xl:flex-[0_0_55%] h-full flex items-center justify-center cursor-pointer"
+              key={index}
+              onClick={() => {
+                if (index !== selectedIndex) {
+                  emblaApi?.scrollTo(index);
+                }
+              }}
+            >
+              <div className={`relative w-full h-full max-h-[85vh] transition-all duration-500 ease-out ${index === selectedIndex ? "opacity-100 scale-110" : "opacity-40 scale-95"
+                }`}>
+                <Image
+                  src={img}
                   alt={`Screenshot fullscreen ${index + 1}`}
                   fill
                   className="object-contain"
@@ -95,14 +109,13 @@ const FullscreenLightbox = ({ images, initialIndex, onClose }: { images: string[
           >
             <ChevronRight size={32} className="w-6 h-6 md:w-8 md:h-8" />
           </button>
-          
+
           <div className="absolute bottom-6 left-0 right-0 flex justify-center gap-3 z-[110]">
             {images.map((_, index) => (
               <button
                 key={index}
-                className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all ${
-                  index === selectedIndex ? "bg-white w-6 md:w-8" : "bg-white/50 hover:bg-white/70"
-                }`}
+                className={`w-2 h-2 md:w-2.5 md:h-2.5 rounded-full transition-all ${index === selectedIndex ? "bg-white w-6 md:w-8" : "bg-white/50 hover:bg-white/70"
+                  }`}
                 onClick={() => emblaApi?.scrollTo(index)}
                 aria-label={`Go to slide ${index + 1}`}
               />
@@ -152,13 +165,13 @@ export function Carousel({ images }: CarouselProps) {
         <div className="overflow-hidden" ref={emblaRef}>
           <div className="flex">
             {images.map((img, index) => (
-              <div 
-                className="flex-[0_0_100%] min-w-0 relative aspect-video bg-black/20 cursor-pointer" 
+              <div
+                className="flex-[0_0_100%] min-w-0 relative aspect-video bg-black/20 cursor-pointer"
                 key={index}
                 onClick={() => setIsFullscreen(true)}
               >
-                <Image 
-                  src={img} 
+                <Image
+                  src={img}
                   alt={`Screenshot ${index + 1}`}
                   fill
                   className="object-cover rounded-t-xl hover:scale-105 transition-transform duration-500"
@@ -168,7 +181,7 @@ export function Carousel({ images }: CarouselProps) {
             ))}
           </div>
         </div>
-        
+
         {images.length > 1 && (
           <>
             {/* Navigation */}
@@ -192,9 +205,8 @@ export function Carousel({ images }: CarouselProps) {
               {images.map((_, index) => (
                 <button
                   key={index}
-                  className={`w-2 h-2 rounded-full transition-all ${
-                    index === selectedIndex ? "bg-white w-4" : "bg-white/50"
-                  }`}
+                  className={`w-2 h-2 rounded-full transition-all ${index === selectedIndex ? "bg-white w-4" : "bg-white/50"
+                    }`}
                   onClick={(e) => { e.stopPropagation(); emblaApi?.scrollTo(index); }}
                   aria-label={`Go to slide ${index + 1}`}
                 />
@@ -205,10 +217,10 @@ export function Carousel({ images }: CarouselProps) {
       </div>
 
       {mounted && isFullscreen && createPortal(
-        <FullscreenLightbox 
-          images={images} 
-          initialIndex={selectedIndex} 
-          onClose={() => setIsFullscreen(false)} 
+        <FullscreenLightbox
+          images={images}
+          initialIndex={selectedIndex}
+          onClose={() => setIsFullscreen(false)}
         />,
         document.body
       )}
