@@ -18,7 +18,7 @@ export interface SkillCategory {
 export interface PersonalInfo {
   name: string;
   title: string;
-  bio: string;
+  bio: string[];
   github: string;
   linkedin: string;
   email: string;
@@ -48,7 +48,10 @@ export const portfolioData: PortfolioData = {
   personalInfo: {
     name: "Iván Emanuel Maciel",
     title: "Estudiante avanzado de Lic. en Cs. de la Computación",
-    bio: "Soy una persona entusiasta sobre tecnologías nuevas. Me gusta trabajar en equipo y aprender de los demás. Busco mejorar mis habilidades constantemente. En el aspecto técnico, mis tópicos de interes son: desarrollo web, desarrollo mobile Android nativo, y procesamiento de lenguaje natural e inteligencia artificial.",
+    bio: [
+      "Soy una persona entusiasta sobre tecnologías nuevas. Me gusta trabajar en equipo y aprender de los demás. Busco mejorar mis habilidades constantemente.",
+      "En el aspecto técnico, mis tópicos de interes son: desarrollo web, desarrollo mobile Android nativo, y procesamiento de lenguaje natural e inteligencia artificial."
+    ],
     github: "https://github.com/ivanmacieldxz",
     linkedin: "https://www.linkedin.com/in/iv%C3%A1n-maciel-344a543b2/",
     email: "ivanemanuelmaciel@gmail.com",

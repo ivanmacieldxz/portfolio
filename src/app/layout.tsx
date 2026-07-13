@@ -10,7 +10,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: `${portfolioData.personalInfo.name} | ${portfolioData.personalInfo.title}`,
-  description: portfolioData.personalInfo.bio,
+  description: portfolioData.personalInfo.bio.join(' '),
 };
 
 export default function RootLayout({
