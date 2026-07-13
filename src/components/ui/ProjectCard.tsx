@@ -11,7 +11,7 @@ interface ProjectCardProps {
 
 export function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <div className="flex flex-col overflow-hidden rounded-2xl bg-surface border border-surface-border hover:border-primary/50 transition-colors duration-300 group">
+    <div className="flex flex-col h-full overflow-hidden rounded-2xl bg-surface border border-surface-border hover:border-primary/50 transition-colors duration-300 group">
       <div className="p-4 pb-0">
         <Carousel images={project.images} />
       </div>
