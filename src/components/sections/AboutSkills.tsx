@@ -20,7 +20,7 @@ export function AboutSkills() {
     <section id="about" className="py-24 px-6 md:px-12 lg:px-24 bg-surface/30">
       <div className="max-w-7xl mx-auto">
         <div className="flex flex-col gap-16">
-          
+
           {/* About Me */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -52,7 +52,7 @@ export function AboutSkills() {
               <span className="text-primary font-mono text-xl md:text-3xl">03.</span>
               Habilidades
             </h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {skills.map((skillGroup, idx) => (
                 <div key={idx} className="glass p-6 rounded-2xl">

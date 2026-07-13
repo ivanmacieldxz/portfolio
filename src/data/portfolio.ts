@@ -48,7 +48,7 @@ export const portfolioData: PortfolioData = {
   personalInfo: {
     name: "Iván Emanuel Maciel",
     title: "Estudiante avanzado de Lic. en Cs. de la Computación",
-    bio: "Me considero una persona curiosa y proactiva, con una gran facilidad para adaptarme a nuevas tecnologías y desafíos. Disfruto del trabajo en equipo y me esfuerzo por mantener una comunicación clara y efectiva. Busco constantemente aprender y mejorar mis habilidades para poder contribuir de manera significativa en mis proyectos.",
+    bio: "Soy una persona entusiasta sobre tecnologías nuevas. Me gusta trabajar en equipo y aprender de los demás. Busco mejorar mis habilidades constantemente. En el aspecto técnico, mis tópicos de interes son: desarrollo web, desarrollo mobile Android nativo, y procesamiento de lenguaje natural e inteligencia artificial.",
     github: "https://github.com/ivanmacieldxz",
     linkedin: "https://www.linkedin.com/in/iv%C3%A1n-maciel-344a543b2/",
     email: "ivanemanuelmaciel@gmail.com",
@@ -58,15 +58,15 @@ export const portfolioData: PortfolioData = {
       title: "Sobre Mí",
       paragraphs: [
         "Soy un desarrollador apasionado por el diseño y la interacción. Mi objetivo principal es construir interfaces que no solo funcionen perfectamente, sino que también dejen una impresión duradera en los usuarios.",
-        "A lo largo de mi carrera, he trabajado en diversos proyectos, desde aplicaciones internas hasta productos SaaS de alto tráfico. Me encanta explorar nuevas tecnologías, optimizar el rendimiento (Core Web Vitals) y crear sistemas de diseño escalables.",
-        "Cuando no estoy programando, probablemente me encuentres leyendo sobre UX, experimentando con animaciones CSS/Framer Motion, o simplemente tomando un buen café."
+        "A lo largo de mi carrera académica, he trabajado en diversos proyectos, principalmente proyectos académicos, pero últimamente en proyectos personales que resultan de mi interés. Me encanta explorar nuevas tecnologías que se alineen con mis tópicos de interés y poner en práctica lo aprendido.",
+        "Creo que me destaco por mi interés en las personas, disfrutando tener experiencias amenas en el trabajo en equipo y resolución de problemas en conjunto con otras personas."
       ]
     },
     contact: {
       subtitle: "¿Qué sigue?",
       title: "Ponte en contacto",
       description: "Actualmente estoy abierto a nuevas oportunidades. Si tienes una pregunta, una propuesta interesante o simplemente quieres saludar, mi bandeja de entrada está siempre abierta. ¡Haré lo posible por responderte pronto!",
-      ctaText: "Saludar"
+      ctaText: "Enviar mensaje"
     }
   },
   projects: [
@@ -83,6 +83,7 @@ export const portfolioData: PortfolioData = {
       ],
       repoLink: "https://github.com/ivanmacieldxz/my-news-feed",
       demoLink: "https://my-news-feed-ivanmacieldxzs-projects.vercel.app/",
+      aiDriven: true,
     },
     {
       id: "nutricraft",
@@ -97,6 +98,7 @@ export const portfolioData: PortfolioData = {
       ],
       repoLink: "https://github.com/ivanmacieldxz/nutricraft",
       demoLink: "https://nutricraft-gilt.vercel.app/",
+      aiDriven: true,
     },
     {
       id: "portfolio",
@@ -131,7 +133,7 @@ export const portfolioData: PortfolioData = {
     },
     {
       category: "Mobile",
-      skills: ["Android", "Kotlin", "Jetpack Compose", "XML"]
+      skills: ["Android", "Kotlin", "Jetpack Compose", "XML", "Gradle"]
     },
     {
       category: "Tools & Others",
