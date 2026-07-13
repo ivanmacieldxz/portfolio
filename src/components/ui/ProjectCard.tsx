@@ -2,7 +2,7 @@
 
 import { Project } from "@/data/portfolio";
 import { Carousel } from "./Carousel";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, Sparkles } from "lucide-react";
 import { Github } from "@/components/ui/Icons";
 
 interface ProjectCardProps {
@@ -17,9 +17,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
       </div>
       
       <div className="flex flex-col flex-grow p-6 md:p-8">
-        <h3 className="text-2xl font-bold mb-2 group-hover:text-primary transition-colors">
-          {project.title}
-        </h3>
+        <div className="flex items-start justify-between gap-4 mb-2">
+          <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
+            {project.title}
+          </h3>
+          {project.aiDriven && (
+            <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-xs font-semibold shrink-0 cursor-default" title="AI Driven Development">
+              <Sparkles size={14} className="animate-pulse" />
+              <span>AI Driven</span>
+            </div>
+          )}
+        </div>
         
         <p className="text-white/70 mb-4 text-sm md:text-base">
           {project.detailedDescription}
