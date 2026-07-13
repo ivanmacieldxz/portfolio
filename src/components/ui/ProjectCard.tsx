@@ -45,15 +45,17 @@ export function ProjectCard({ project }: ProjectCardProps) {
         </div>
 
         <div className="mt-auto flex items-center gap-4 pt-4 border-t border-surface-border">
-          <a
-            href={project.demoLink}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 text-sm font-semibold hover:text-primary transition-colors"
-          >
-            <ExternalLink size={18} />
-            Ver Demo
-          </a>
+          {project.demoLink && (
+            <a
+              href={project.demoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 text-sm font-semibold hover:text-primary transition-colors"
+            >
+              <ExternalLink size={18} />
+              Ver Demo
+            </a>
+          )}
           <a
             href={project.repoLink}
             target="_blank"
